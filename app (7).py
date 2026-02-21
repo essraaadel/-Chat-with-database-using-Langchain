@@ -4,8 +4,8 @@ import pandas as pd
 from sqlalchemy import create_engine, text
 
 # Configuration Constants (Updated with your new credentials)
-GOOGLE_API_KEY = "AIzaSyB1x3l047bjMPty6q6P3DJdOY_tBJjuk34"
-DB_URL = "postgresql://postgres:QIcLpcCXTPpEyqUnAOvNLMNkSboGYddW@crossover.proxy.rlwy.net:56354/railway"
+GOOGLE_API_KEY = ""
+DB_URL = ""
 
 # Setup Google Generative AI
 genai.configure(api_key=GOOGLE_API_KEY)
@@ -94,4 +94,5 @@ Task: Answer the user's question in a naturel language format based on the data 
 If the data is empty, say "No results found".
 """
     response = model.generate_content(prompt)
+
     return response.text.strip()
